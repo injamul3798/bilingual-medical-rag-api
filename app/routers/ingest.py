@@ -7,12 +7,13 @@ from langchain_text_splitters import RecursiveCharacterTextSplitter
 from app.middleware.auth import verify_api_key
 from app.models.schemas import IngestResponse
 from app.services.embedding import get_embedding_model
-from app.services.language import detect_lang
+from app.services.language import detect_lang_code
 from app.services.vector_store import add_vectors, persist_store
 
 router = APIRouter(prefix="", tags=["ingest"], dependencies=[Depends(verify_api_key)])
 
 MAX_FILE_SIZE = 5 * 1024 * 1024
+UNSUPPORTED_LANG_MSG = "Supported languages are English and Japanese. Please provide input in English or Japanese."
 
 
 @router.post("/ingest", response_model=IngestResponse)
@@ -29,7 +30,10 @@ async def ingest_document(file: UploadFile = File(...)) -> IngestResponse:
     except UnicodeDecodeError as exc:
         raise HTTPException(status_code=400, detail="File must be UTF-8 encoded") from exc
 
-    lang = detect_lang(text)
+    detected = detect_lang_code(text)
+    if detected not in {"en", "ja"}:
+        raise HTTPException(status_code=400, detail=UNSUPPORTED_LANG_MSG)
+    lang = detected
 
     separators = ["。", "！", "？", "\n\n", "\n", ""] if lang == "ja" else ["\n\n", "\n", ". ", "! ", "? ", " ", ""]
     splitter = RecursiveCharacterTextSplitter(

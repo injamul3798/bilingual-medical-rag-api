@@ -9,7 +9,7 @@ TRANSLATION_MODELS = {
 }
 
 
-def detect_lang(text: str) -> str:
+def detect_lang_code(text: str) -> str:
     try:
         result = detect(text[:300], low_memory=True)
     except TypeError:
@@ -29,6 +29,11 @@ def detect_lang(text: str) -> str:
         elif isinstance(first, str):
             lang = first.lower()
 
+    return lang
+
+
+def detect_lang(text: str) -> str:
+    lang = detect_lang_code(text)
     return "ja" if lang == "ja" else "en"
 
 

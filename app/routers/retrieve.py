@@ -1,18 +1,24 @@
 ﻿import numpy as np
-from fastapi import APIRouter, Depends
+from fastapi import APIRouter, Depends, HTTPException
 
 from app.middleware.auth import verify_api_key
 from app.models.schemas import RetrieveRequest, RetrieveResponse, RetrievedDocument
 from app.services.embedding import get_embedding_model
-from app.services.language import detect_lang
+from app.services.language import detect_lang_code
 from app.services.vector_store import get_docstore, search_vectors
 
 router = APIRouter(prefix="", tags=["retrieve"], dependencies=[Depends(verify_api_key)])
 
+UNSUPPORTED_LANG_MSG = "Supported languages are English and Japanese. Please provide input in English or Japanese."
+
 
 @router.post("/retrieve", response_model=RetrieveResponse)
 async def retrieve_documents(request: RetrieveRequest) -> RetrieveResponse:
-    query_lang = detect_lang(request.query)
+    detected = detect_lang_code(request.query)
+    if detected not in {"en", "ja"}:
+        raise HTTPException(status_code=400, detail=UNSUPPORTED_LANG_MSG)
+    query_lang = detected
+
     model = get_embedding_model()
 
     query_vec = model.encode([request.query], normalize_embeddings=True)
