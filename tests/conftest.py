@@ -6,8 +6,11 @@ import pytest
 from fastapi.testclient import TestClient
 
 from app.main import app
-from app.services import embedding, generator, language
+from app.services import embedding
 from app.services import vector_store
+import app.routers.generate as generate_router
+import app.routers.retrieve as retrieve_router
+import app.routers.ingest as ingest_router
 
 
 class DummyEmbeddingModel:
@@ -51,13 +54,19 @@ def setup_env(tmp_path, monkeypatch):
 
 @pytest.fixture
 def client(monkeypatch):
-    monkeypatch.setattr(language, "detect_lang", lambda text: "ja" if any("\u3040" <= c <= "\u30ff" for c in text) else "en")
-    monkeypatch.setattr(generator, "generate_answer", lambda system_prompt, user_message: "Mocked answer")
+    detect_lang_code = lambda text: "ja" if any("\u3040" <= c <= "\u30ff" for c in text) else "en"
+
+    monkeypatch.setattr(ingest_router, "detect_lang_code", detect_lang_code)
+    monkeypatch.setattr(retrieve_router, "detect_lang_code", detect_lang_code)
+    monkeypatch.setattr(generate_router, "detect_lang_code", detect_lang_code)
+
+    monkeypatch.setattr(generate_router, "generate_answer", lambda system_prompt, user_message: "Mocked answer")
+    monkeypatch.setattr(generate_router, "generate_answer_free", lambda system_prompt, user_message: "Mocked free answer")
 
     def no_translate(text: str, src: str, tgt: str) -> str:
         return f"{text} ({src}->{tgt})" if src != tgt else text
 
-    monkeypatch.setattr(language, "translate", no_translate)
+    monkeypatch.setattr(generate_router, "translate", no_translate)
 
     return TestClient(app)
 
