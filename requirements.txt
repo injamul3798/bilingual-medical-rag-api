@@ -8,6 +8,7 @@ transformers
 torch
 openai
 pydantic-settings
+python-multipart
 python-dotenv
 pytest
 httpx
