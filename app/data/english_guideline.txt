@@ -1,0 +1,94 @@
+CLINICAL GUIDELINES: TYPE 2 DIABETES MANAGEMENT
+Version 3.2 | Acme Medical Reference | 2024 Edition
+================================================================
+
+SECTION 1: DIAGNOSIS AND SCREENING
+
+Type 2 diabetes mellitus (T2DM) is diagnosed when any one of the following criteria is met:
+- Fasting plasma glucose (FPG) ≥ 126 mg/dL (7.0 mmol/L) on two separate occasions
+- 2-hour plasma glucose ≥ 200 mg/dL (11.1 mmol/L) during a 75g oral glucose tolerance test (OGTT)
+- HbA1c ≥ 6.5% (48 mmol/mol) confirmed by repeat testing
+- Random plasma glucose ≥ 200 mg/dL in a patient with classic hyperglycemia symptoms
+
+Screening is recommended for all adults aged 35 and above, or younger adults with BMI ≥ 25 kg/m²
+combined with one or more risk factors including: family history of T2DM, hypertension, dyslipidemia,
+history of gestational diabetes, or polycystic ovary syndrome (PCOS).
+
+Prediabetes is defined as FPG between 100–125 mg/dL or HbA1c between 5.7–6.4%.
+All prediabetic patients should be enrolled in a structured lifestyle intervention program.
+
+SECTION 2: GLYCEMIC TARGETS
+
+General HbA1c targets for non-pregnant adults:
+- Target HbA1c: < 7.0% for most patients
+- Less stringent target (< 8.0%): for elderly patients, those with hypoglycemia unawareness,
+  limited life expectancy, or advanced complications
+- More stringent target (< 6.5%): for younger patients with short disease duration,
+  no cardiovascular disease, and low hypoglycemia risk
+
+Fasting glucose target: 80–130 mg/dL
+Postprandial glucose target (1–2 hours after meal): < 180 mg/dL
+
+SECTION 3: FIRST-LINE PHARMACOTHERAPY
+
+Metformin remains the preferred initial pharmacological agent for T2DM unless contraindicated.
+Standard starting dose: 500 mg twice daily with meals, titrated up to 2000 mg/day over 4 weeks.
+
+Contraindications for Metformin:
+- eGFR < 30 mL/min/1.73m² (contraindicated); use with caution if eGFR 30–45
+- Active hepatic disease or alcohol use disorder
+- Iodinated contrast dye procedures (hold 48 hours before and after)
+
+If HbA1c is ≥ 9.0% at diagnosis or if patient is symptomatic, consider:
+- Dual therapy: Metformin + GLP-1 receptor agonist or SGLT2 inhibitor
+- Insulin therapy if HbA1c ≥ 10% or patient has ketosis
+
+SECTION 4: CARDIOVASCULAR AND RENAL PROTECTION
+
+For patients with established cardiovascular disease (CVD) or high CVD risk:
+- GLP-1 receptor agonists (e.g., semaglutide, liraglutide) are preferred add-on therapy
+  due to cardiovascular outcome benefits
+- SGLT2 inhibitors (e.g., empagliflozin, dapagliflozin) are recommended for patients
+  with heart failure with reduced ejection fraction (HFrEF) or chronic kidney disease (CKD)
+
+Patients with CKD (eGFR 25–60): SGLT2 inhibitors reduce progression of diabetic nephropathy.
+Target blood pressure in T2DM with CKD: < 130/80 mmHg.
+ACE inhibitors or ARBs are first-line antihypertensives in T2DM with proteinuria.
+
+SECTION 5: LIFESTYLE INTERVENTIONS
+
+All T2DM patients must receive Medical Nutrition Therapy (MNT) delivered by a registered dietitian.
+Recommended dietary approaches:
+- Mediterranean diet or low-carbohydrate diet improves glycemic control
+- Carbohydrate intake: individualized, typically 45–60% of total calories
+- Sodium intake: < 2300 mg/day; further restriction to < 1500 mg/day if hypertension present
+- Avoid sugar-sweetened beverages entirely
+
+Physical activity recommendations:
+- Minimum 150 minutes/week of moderate-intensity aerobic exercise
+- Resistance training at least 2 days/week
+- Sedentary time should be broken up every 30 minutes
+
+Weight loss target: 5–10% body weight reduction improves glycemic control significantly.
+Bariatric surgery should be considered for BMI ≥ 40 or BMI ≥ 35 with uncontrolled T2DM.
+
+SECTION 6: MONITORING AND FOLLOW-UP
+
+HbA1c testing: every 3 months until stable, then every 6 months.
+Annual screening for:
+- Diabetic retinopathy: dilated fundus examination
+- Diabetic nephropathy: urine albumin-to-creatinine ratio (UACR) + eGFR
+- Peripheral neuropathy: 10g monofilament + vibration perception
+- Lipid panel: LDL target < 100 mg/dL; < 70 mg/dL if CVD present
+- Thyroid function: TSH annually in type 2 patients
+
+Foot care: daily self-inspection, annual podiatry review.
+Dental care: biannual review.
+
+SECTION 7: HYPOGLYCEMIA MANAGEMENT
+
+Mild-to-moderate hypoglycemia:
+- Rule of 15: 15g fast-acting carbohydrate; recheck glucose in 15 min.
+Severe hypoglycemia:
+- Glucagon 1mg IM/SC or intranasal glucagon 3mg; IV dextrose if available.
+Emergency services should be contacted immediately.

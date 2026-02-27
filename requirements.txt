@@ -1,0 +1,15 @@
+﻿fastapi
+uvicorn
+faiss-cpu
+sentence-transformers
+fast-langdetect
+langchain-text-splitters
+transformers
+torch
+openai
+pydantic-settings
+python-dotenv
+pytest
+httpx
+pytest-cov
+ruff
