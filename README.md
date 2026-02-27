@@ -43,3 +43,15 @@ docker compose up --build
 ```bash
 pytest tests/ --cov=app --cov-report=xml
 ```
+
+##Results Demo
+1. Retrive API input and output
+   <img width="975" height="441" alt="image" src="https://github.com/user-attachments/assets/977f56d4-fd91-4e92-9d67-f5309f70d3e0" />
+   <img width="975" height="443" alt="image" src="https://github.com/user-attachments/assets/c0a1afe5-818a-4bc0-899a-72961cbadce8" />
+
+2. Genration API input and output
+   <img width="975" height="402" alt="image" src="https://github.com/user-attachments/assets/3201802b-a276-4885-b933-7b45e4ad12d9" />
+   <img width="975" height="400" alt="image" src="https://github.com/user-attachments/assets/4c2abca4-2f71-4a3c-8848-4bafa5a5a573" />
+
+
+   
